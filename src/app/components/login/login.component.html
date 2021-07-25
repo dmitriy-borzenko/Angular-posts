@@ -1,0 +1,32 @@
+<div fxLayoutAlign="center center" fxFlexFill>
+  <mat-card fxFlex="25">
+    <mat-toolbar color="primary">Please sign in </mat-toolbar>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" fxLayoutAlign="stretch" fxLayout="column" class="form">
+      <mat-form-field [ngClass]="{'hasErrors':loginForm.get('email').errors &&
+        (loginForm.get('email').touched || loginForm.get('email').dirty)}">
+        <input matInput type="email" formControlName="email" placeholder="Email adress">
+      </mat-form-field>
+      <span *ngIf="loginForm.get('email').errors &&
+      (loginForm.get('email').touched || loginForm.get('email').dirty)">
+        <span class="hasErrors" *ngIf="loginForm.get('email').errors?.required">
+          Email is required
+        </span>
+        <span class="hasErrors" *ngIf="loginForm.get('email').errors?.email">
+          Email address is invalid
+        </span>
+      </span>
+      <mat-form-field [ngClass]="{'hasErrors':loginForm.get('password').errors &&
+      (loginForm.get('password').touched || loginForm.get('password').dirty)}">
+        <input matInput formControlName="password" type="password" placeholder="Password">
+      </mat-form-field>
+      <span *ngIf="loginForm.get('password').errors &&
+      (loginForm.get('password').touched || loginForm.get('password').dirty)">
+        <span class="hasErrors" *ngIf="loginForm.get('password').errors?.required">
+          Password is required
+        </span>
+      </span>
+      <button class="mt20" type="submit" mat-raised-button color="primary">Sign in</button>
+    </form>
+    <p *ngIf="enterSuccess" class="loginError"> Invalid Email or Password</p>
+  </mat-card>
+</div>

@@ -1,0 +1,14 @@
+.form {
+  padding: 5px;
+}
+.mt20 {
+  margin-top: 20px;
+}
+.hasErrors {
+  color: red;
+}
+.loginError {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+}

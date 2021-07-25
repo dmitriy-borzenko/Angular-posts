@@ -1,0 +1,16 @@
+<h1 style="padding-top: 25px;text-align: center;">Post with id={{post?.id}} details</h1>
+<div class="container">
+  <h3 class="title"> <span class="underline">Title:</span> &nbsp;&nbsp; {{post?.title}}</h3>
+  <p class="body"><span class="underline"> Body:</span> &nbsp;&nbsp; {{post?.body}}</p>
+  <p><span class="underline">Email:</span> &nbsp;&nbsp; {{user?.email}}</p>
+  <p><span class="underline"> Username:</span> &nbsp;&nbsp; {{user?.name}}</p>
+  <div class="comments">
+    <h2 style="text-align: center;">Comments</h2>
+    <ng-container *ngFor="let comment of (comments$ | async) ;trackBy:trackById">
+      <div class="comments-block">
+        <p style="text-decoration:underline;">Email : {{comment?.email}}</p>
+        <p>{{comment?.body}}</p>
+      </div>
+    </ng-container>
+  </div>
+</div>

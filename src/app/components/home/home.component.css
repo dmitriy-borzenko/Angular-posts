@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.card {
+  text-align: center;
+  border: 1px solid black;
+  margin: 10px;
+  width: 50%;
+}
+.title {
+  margin-top: 15px;
+  text-align: center;
+}
+.header-title {
+  justify-content: center;
+  background: lightgreen;
+}
+.mat-card {
+  padding: 0;
+}
+
+.mat-card-header .mat-card-title {
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+.content {
+  margin-top: 20px;
+  padding: 10px;
+}
+.actions {
+  margin: 10px 0;
+}
+.mat-card > .mat-card-actions:last-child {
+  margin-bottom: -8px;
+  padding-bottom: 25px;
+}
+.view-button {
+  text-decoration: none;
+  padding: 10px 30px;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+.paginator {
+ padding-bottom: 20px;
+}

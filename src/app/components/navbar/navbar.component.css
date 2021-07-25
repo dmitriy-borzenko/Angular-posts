@@ -1,0 +1,9 @@
+.spacer {
+  flex: 1;
+}
+.time {
+  position: absolute;
+  padding: 0;
+  left: 47%;
+  top: 2%;
+}

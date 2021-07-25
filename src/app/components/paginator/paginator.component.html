@@ -1,0 +1,11 @@
+<div class="container">
+  <button mat-raised-button color="primary" [disabled]="!canMoveToPreviousPage" (click)="moveToFirstPage()"><i
+      class="material-icons rotate ">double_arrow</i></button>
+  <button mat-raised-button color="primary" [disabled]="!canMoveToPreviousPage" (click)="moveToPreviousPage()"><i
+      class="material-icons">arrow_back_ios</i></button>
+  <button mat-raised-button disabled style="width:100px" color="primary">{{pageIndex + 1}} / {{_pageCount}}</button>
+  <button mat-raised-button color="primary" [disabled]="!canMoveToNextPage" (click)="moveToNextPage()"><i
+      class="material-icons">arrow_forward_ios</i></button>
+  <button mat-raised-button color="primary" [disabled]="!canMoveToNextPage" (click)="moveToLastPage()"><i
+      class="material-icons">double_arrow</i></button>
+</div>
